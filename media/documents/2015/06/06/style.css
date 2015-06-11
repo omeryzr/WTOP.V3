@@ -1,0 +1,249 @@
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+/*.dropdown-submenu:hover>.dropdown-menu{display:block;}*/
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+.padding-left-ten-px { padding-left: 10px; }
+.red-text { color: #FF0000; }
+.blog-blue { color: #0080c5; }
+.destek-blue { color: #0080c5; }
+.twitter-blue { color: #1ec7fe; }
+.facebook-blue { color: #3c599f; }
+.youtube-blue { color: #bb0000; }
+.google-blue { color: #dd4b39; }
+.instagram-blue { color: #000; }
+.navbar-right{padding-right: 25px;}
+.form-group{padding: 10px;}
+.form-panel-width { width: 220px; }/*YOU CAN MAKE PANEL AS WIDE AS NEEDED*/
+.color-blue {color: #0080c5;}
+.color-red {color: #FF0000;}
+.error-message {font-size: 10px;}
+
+@media screen and (min-width: 30em ) {
+  .form-panel-width { width: 100%; }
+}
+header .row{
+	margin-top:60px;
+	width:800px;
+	margin-bottom:5px;
+	
+	}
+header .advertise {
+	height: 90px;
+     width: 728px;
+	}
+header .logo {
+	height: 90px;
+	width:220px;
+    }
+.navbar-default .navbar-nav>li>a>span {
+        margin-top: -17px;
+        margin-left: 5px;
+        }
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+body {
+  font-family: 'Open Sans', 'sans-serif';
+  
+}
+
+
+.mega-dropdown {
+  position: static !important;
+  width:100%;
+}
+.mega-dropdown-menu {
+    padding: 20px 0px;
+    width: 100%;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.mega-dropdown-menu:before {
+    content: "";
+    border-bottom: 15px solid #fff;
+    border-right: 17px solid transparent;
+    border-left: 17px solid transparent;
+    position: absolute;
+    top: -15px;
+    left: 285px;
+    z-index: 10;
+}
+.mega-dropdown-menu:after {
+    content: "";
+    border-bottom: 17px solid #ccc;
+    border-right: 19px solid transparent;
+    border-left: 19px solid transparent;
+    position: absolute;
+    top: -17px;
+    left: 283px;
+    z-index: 8;
+}
+.mega-dropdown-menu > li > ul {
+  padding: 0;
+  margin: 0;
+}
+.mega-dropdown-menu > li > ul > li {
+  list-style: none;
+}
+.mega-dropdown-menu > li > ul > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #999;
+  white-space: normal;
+}
+.mega-dropdown-menu > li ul > li > a:hover,
+.mega-dropdown-menu > li ul > li > a:focus {
+  text-decoration: none;
+  color: #444;
+  background-color: #f5f5f5;
+}
+.mega-dropdown-menu .dropdown-header {
+  color: #428bca;
+  font-size: 18px;
+  font-weight:bold;
+}
+.mega-dropdown-menu form {
+    margin:3px 20px;
+}
+.mega-dropdown-menu .form-group {
+    margin-bottom: 3px;
+}
+#Manset .carousel-indicators {
+bottom: 0px;
+margin: 0 auto;
+width: 950px;
+text-align: left;
+left: auto;
+background: #000;
+position: absolute;
+padding-left: 0;
+list-style: none;
+text-align: center;
+height: 70px;
+overflow: hidden;
+}
+@media screen and (min-width: 768px)
+.carousel-indicators {
+bottom: 20px;
+}
+
+
+
+#Manset .carousel-indicators li {
+border: none;
+border-radius: 0px;
+text-indent: 0px;
+background-size: cover !important;
+float: left;
+width: 95px;
+height: 70px;
+margin: 0px;
+text-indent: -999px;
+cursor: pointer;
+}
+#Manset {
+position: relative;
+width: 950px;
+height: 470px;
+margin: 0px auto;
+position: relative;
+}
+.carousel-inner {
+position: relative;
+overflow: hidden;
+width: 100%;
+}
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+#Manset .carousel-caption {
+width: 100%;
+line-height: 24px;
+background: #000;
+background: rgba(0,0,0,0.87);
+left: 0px;
+right: 0px;
+bottom: 0px;
+font-size: 24px;
+padding: 17px 20px;
+text-align: left;
+}
+@media screen and (min-width: 768px){
+.carousel-caption {
+left: 20%;
+right: 20%;
+padding-bottom: 30px;
+}}
+
+#Manset .badge {
+text-align: left;
+position: absolute;
+bottom: 54px;
+left: 0px;
+border-radius: 0px;
+background: none;
+background:;
+font-size: 14px;
+width: auto;
+height: 40px;
+z-index: 2;
+padding: 13px 15px 0 40px;
+}
+.badge {
+display: inline-block;
+min-width: 10px;
+padding: 3px 7px;
+font-size: 12px;
+font-weight: bold;
+color: #ffffff;
+line-height: 1;
+vertical-align: baseline;
+white-space: nowrap;
+text-align: center;
+background-color: #999999;
+border-radius: 10px;
+}
+#Manset .video i {
+
+float: right;
+font-style: normal;
+font-size: 30px;
+text-align: center;
+width: 50px;
+padding-top: 0px;
+height: 20px;
+position: absolute;
+right: 10px;
+top: 10px;
+}
+#Manset .video em {
+
+float: right;
+font-style: normal;
+font-size: 15px;
+text-align: center;
+width: 50px;
+padding-top: 25px;
+height: 20px;
+position: absolute;
+right: 10px;
+top: 10px;
+}
+
+#Manset .carousel-indicators li a {
+height: 70px;
+width: auto;
+display: block;
+border-top: 5px solid #cb0000;
+}
+a {
+color: #428bca;
+text-decoration: none;
+}
+#Manset .carousel-indicators li.active a {
+border-top: 5px solid #2980b9;
+}

@@ -1,0 +1,4 @@
+python2.7
+django=1.6.4
+debugbar
+psycopg2

@@ -1,0 +1,68 @@
+
+{% include 'header.html' %}
+{% include 'sidebar.html' %}
+        {% load i18n %}
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
+<div class="vc_span6 wpb_column column_container">
+                                <div class="wpb_wrapper">
+
+                                    <div class="wpb_text_column wpb_content_element ">
+                                        <div class="wpb_wrapper">
+                                            <h3>Profil Güncelle </h3>
+                                            {% if form_first_and_last_name.errors %}
+                                                <p>{{ form_first_and_last_name.errors }}</p>
+                                            {% endif %}
+
+                                            <form method='POST' enctype="multipart/form-data">
+                                                {% csrf_token %}
+                                                <p>First Name<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.first_name }}</span>
+                                                </p>
+
+                                                <p>Last Name<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.last_name }}</span>
+                                                </p>
+                                                <p>Email<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.email }}</span>
+                                                </p>
+                                                <p>Hakkında<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.hakkinda }}</span>
+                                                </p>
+                                                <p>Bölüm<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.bolum }}</span>
+                                                </p>
+                                                <p>Sınıf<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.sinif }}</span>
+                                                </p>
+                                                <p>Puan<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.points }}</span>
+                                                </p>
+                                                <p>Twitter<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.twitter }}</span>
+                                                </p>
+                                                <p>Facebook<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.facebook }}</span>
+                                                </p>
+                                                <p>Linkedn<br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.linkedn }}</span>
+                                                </p>
+                                                <p>Google + <br/>
+                                                    <span class="wpcf7-form-control-wrap">{{ form_first_and_last_name.googleplus }}</span>
+                                                </p>
+
+
+                                                <input type='submit' name="name_form"
+                                                       class="wpcf7-form-control-wrap" value='Update'/>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+    </div>
+
+
+
+
+{% include 'footer.html' %}

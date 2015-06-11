@@ -1,0 +1,96 @@
+{% include 'header.html' %}
+{% include 'sidebar.html' %}
+        {% load i18n %}
+        {% load staticfiles %}
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
+<div class="vc_span6 wpb_column column_container">
+                                <div class="wpb_wrapper">
+
+                                    <div class="wpb_text_column wpb_content_element ">
+                                        <div class="wpb_wrapper">
+                                            <h3>Profile Information </h3>
+                                            <div class="col-md-6">
+                                <div class="b-log-in-form">
+                                    <div class="f-primary-l f-title-big c-secondary">{% trans 'Upload Photo' %}</div>
+                                    <p>{% trans 'Please, you must filled the form with right values and press button' %}</p>
+                                    <hr class="b-hr">
+                                    <form method='POST' enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        {% if form.errors %}
+                                            {{ form.errors }}
+                                            <hr class="b-hr">
+                                        {% endif %}
+                                        <div class="b-form-row b-form-inline b-form-horizontal">
+                                            <div class="col-xs-12">
+                                                <div class="b-form-row">
+                                                    <div class="b-form-horizontal__input">
+                                                        {{ form.profile_photo }}
+                                                    </div>
+                                                </div>
+                                                <div class="b-form-row">
+                                                    <div class="b-form-horizontal__label"></div>
+                                                    <div class="b-form-horizontal__input">
+                                                        <input type='submit' name="submit" value="{% trans 'Upload' %}" class="btn-submit"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+<div class="col-md-6">
+                                <div class="b-log-in-form">
+                                    <div class="f-primary-l f-title-big c-secondary">{% trans 'Change Password' %}</div>
+                                    <p>{% trans 'Please, you must filled the form with right values and press button' %}</p>
+                                    <hr class="b-hr">
+                                    <form id="change_password" method='POST'>
+                                        {% csrf_token %}
+                                        {% if form_password.errors %}
+                                            {{ form_password.errors }}
+                                            <hr class="b-hr">
+                                        {% endif %}
+                                        <div class="b-blog-one-column__info_container c-default">
+                                            <div class="b-form-row">
+                                                <label class="b-form-horizontal__label" for="username">{% trans 'Old Password' %}:</label>
+                                                <div class="b-form-horizontal__input">
+                                                    {{ form_password.old_password }}
+                                                </div>
+                                            </div>
+                                            <div class="b-form-row">
+                                                <label class="b-form-horizontal__label" for="email">{% trans 'New Password' %}:</label>
+                                                <div class="b-form-horizontal__input">
+                                                    {{ form_password.new_password }}
+                                                </div>
+                                            </div>
+                                            <div class="b-form-row">
+                                                <label class="b-form-horizontal__label" for="password">{% trans 'Confirm Password' %}:</label>
+                                                <div class="b-form-horizontal__input">
+                                                    {{ form_password.confirm_password }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-form-row">
+                                            <div class="b-form-horizontal__label"></div>
+                                            <div class="b-form-horizontal__input">
+                                                <input type='submit' value="{% trans 'Change Password' %}" name='Change Password' class="btn-submit"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+    </div>
+
+
+
+
+{% include 'footer.html' %}

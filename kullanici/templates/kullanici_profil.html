@@ -1,0 +1,120 @@
+{% include 'header.html' %}
+       {% if request.user.is_authenticated %}
+{% include 'sidebar.html' %}
+
+<div class='span10 main'>
+    <div class="row">
+		<div class=" col-md-8">
+    	 <div class="well profile col-md-12">
+            <div class="col-sm-10">
+                <div class="col-md-8">
+                    <h2>{{request.user.first_name}} {{request.user.last_name}}</h2>
+                    <p><strong>Hakkımda:</strong>{{ member.hakkinda }} </p>
+
+                </div>
+
+            </div>
+
+             <br>
+            <div class="col-xs-12 divider text-center" style="margin:150px auto 0 auto">
+                <div class="col-xs-12 col-sm-4 emphasis">
+
+                    <p><small>Bilgilerimi Düzenle</small></p>
+                    <a href="/kullanici/kullanici_bilgileri_guncelle"><button class="btn btn-success btn-block" ><span class="fa fa-gear"></span> Güncelle</button> </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 emphasis">
+                    <p><small>Şifre Değiştir</small></p>
+                    <a href="/kullanici/kullanici_sifre_degistir"><button class="btn btn-info btn-block"><span class="fa fa-user"></span> Şifre </button></a>
+                </div>
+
+
+            </div>
+    	 </div>
+</div>
+
+
+<h3 style="margin-right:15px;">Sosyal Medya</h3>
+
+
+
+                    <ul class="social-network social-circle">
+                        <li><a href="{{ member.facebook }}" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="{{ member.twitter }}" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="{{ member.googleplus }}" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="{{ member.linkedn }}" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+				</div>
+
+    <!-- Profil bilgileri-->
+              <div class="col-xs-12 col-sm-8 col-lg-offset-3 col-lg-9">
+              <ul class="list-group">
+                <li class="list-group-item">Adı: {{ request.user.first_name }}</li>
+                  <li class="list-group-item">Soyadı: {{ request.user.last_name }}</li>
+
+                <li class="list-group-item">Kullanıcı Adı: {{ member.username }}</li>
+                <li class="list-group-item"><i class="fa fa-envelope"></i>E-Posta Adresi: {{ member.email }}</li>
+                <li class="list-group-item">Bölüm: {{ member.bolum }}</li>
+                <li class="list-group-item">Sınıf: {{ member.sinif }}</li>
+                <li class="list-group-item">Puan: {{ member.points }}</li>
+              </ul>
+            </div>
+        <!-- Profil bilgileri-->
+
+</div>
+
+
+<!-- Profil resmi ve information-->
+
+
+<!-- Profil resmi ve information-->
+
+
+
+
+
+
+       {% else %}
+        <div class="container">
+                    <div id='content' class='row-fluid'>
+
+        <div class="col-sm-6 col-md-offset-4 text-center">
+            <div class="row vertical-offset-100">
+    	<div class="col-md-6">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Giriş Yap</h3>
+			 	</div>
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" role="form" class="index" method="POST" >
+                        {% csrf_token %}
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" id="emailInput" required="" onchange="try{setCustomValidity('')}catch(e){}"  placeholder="E-posta adresi" name="username" value="" >      <!-- type="email"  yukarıya tipi eklemeyi unutma-->
+
+			    		</div>
+			    		<div class="form-group">
+                            <input class="form-control" id="posswordInput" required="" onchange="try{setCustomValidity('')}catch(e){}" oninvalid="setCustomValidity('Lütfen Şifrenizi Giriniz !')" type="password" placeholder="Şifre" name="password" value="" >
+				   		</div>
+
+			    		<input type="submit" name="giris" value="Giriş Yap" class="btn btn-success btn-sm" />
+			    	</fieldset>
+                            {% if next %}
+                            <input type="hidden" name="next" value="{{ next }}" />
+
+                            {% else %}
+                             <input type="hidden" name="next" value="/index/" />
+                            {% endif %}
+			      	</form>
+
+			    </div>
+			</div>
+		</div>
+	</div>
+    </div>
+
+
+    </div>
+    </div>
+{% endif %}
+
+{% include 'footer.html' %}
